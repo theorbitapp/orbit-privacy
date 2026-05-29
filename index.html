@@ -1,0 +1,730 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Orbit — Privacy Policy</title>
+  <style>
+    :root {
+      --bg:        #0A0C14;
+      --surface:   #1A1D2A;
+      --surface2:  #20243A;
+      --border:    rgba(212, 168, 67, 0.15);
+      --gold:      #D4A843;
+      --gold-dim:  rgba(212, 168, 67, 0.12);
+      --white:     #FFFFFF;
+      --muted:     #8B93A7;
+      --muted2:    #5A6175;
+      --green:     #1DB584;
+      --red:       #E05252;
+    }
+
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      background: var(--bg);
+      color: var(--white);
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+      line-height: 1.75;
+      font-size: 15px;
+    }
+
+    /* ── Top bar ── */
+    .topbar {
+      background: var(--surface);
+      border-bottom: 1px solid var(--border);
+      padding: 18px 40px;
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+    .topbar-logo {
+      width: 36px;
+      height: 36px;
+      flex-shrink: 0;
+    }
+    .topbar-logo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      display: block;
+      mix-blend-mode: lighten;
+    }
+    .topbar-name {
+      color: var(--white);
+      font-size: 26px;
+      font-weight: 800;
+      letter-spacing: -0.5px;
+    }
+    .topbar-divider {
+      width: 1px;
+      height: 22px;
+      background: var(--muted2);
+    }
+    .topbar-label {
+      color: var(--muted);
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    /* ── Layout ── */
+    .layout {
+      display: grid;
+      grid-template-columns: 220px 1fr;
+      max-width: 1100px;
+      margin: 0 auto;
+      min-height: 100vh;
+    }
+
+    /* ── Sidebar ── */
+    .sidebar {
+      padding: 40px 24px 40px 0;
+      position: sticky;
+      top: 61px;
+      height: calc(100vh - 61px);
+      overflow-y: auto;
+      scrollbar-width: none;
+    }
+    .sidebar::-webkit-scrollbar { display: none; }
+    .sidebar-label {
+      color: var(--muted2);
+      font-size: 10px;
+      font-weight: 700;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+      padding-left: 12px;
+    }
+    .sidebar nav { display: flex; flex-direction: column; gap: 2px; }
+    .sidebar a {
+      color: var(--muted);
+      text-decoration: none;
+      font-size: 13px;
+      padding: 7px 12px;
+      border-radius: 6px;
+      border-left: 2px solid transparent;
+      transition: all 0.15s;
+      line-height: 1.4;
+    }
+    .sidebar a:hover {
+      color: var(--white);
+      background: var(--surface);
+      border-left-color: var(--gold);
+    }
+
+    /* ── Main content ── */
+    .main {
+      padding: 48px 40px 80px 48px;
+      border-left: 1px solid var(--border);
+      max-width: 760px;
+    }
+
+    /* ── Hero ── */
+    .hero { margin-bottom: 48px; }
+    .hero h1 {
+      font-size: 2.2rem;
+      font-weight: 900;
+      letter-spacing: -0.5px;
+      color: var(--white);
+      margin-bottom: 8px;
+    }
+    .hero h1 span { color: var(--gold); }
+    .hero-meta {
+      color: var(--muted);
+      font-size: 13px;
+      margin-bottom: 28px;
+    }
+
+    /* ── Summary box ── */
+    .summary {
+      background: var(--gold-dim);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin-bottom: 0;
+    }
+    .summary-title {
+      color: var(--gold);
+      font-size: 11px;
+      font-weight: 800;
+      letter-spacing: 1.2px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .summary ul { padding-left: 18px; }
+    .summary li {
+      color: var(--muted);
+      font-size: 14px;
+      margin-bottom: 7px;
+    }
+    .summary li strong { color: var(--white); }
+
+    /* ── Sections ── */
+    .section { margin-bottom: 52px; scroll-margin-top: 80px; }
+    .section:last-child { margin-bottom: 0; }
+    #summary { scroll-margin-top: 80px; }
+
+    h2 {
+      color: var(--gold);
+      font-size: 13px;
+      font-weight: 800;
+      letter-spacing: 1.1px;
+      text-transform: uppercase;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 1px solid var(--border);
+    }
+    h3 {
+      color: var(--white);
+      font-size: 15px;
+      font-weight: 700;
+      margin-top: 24px;
+      margin-bottom: 10px;
+    }
+    p {
+      color: var(--muted);
+      margin-bottom: 16px;
+      font-size: 14.5px;
+    }
+    p strong { color: var(--white); }
+    ul, ol {
+      padding-left: 20px;
+      margin-bottom: 16px;
+    }
+    li {
+      color: var(--muted);
+      font-size: 14.5px;
+      margin-bottom: 8px;
+    }
+    li strong { color: var(--white); }
+    a { color: var(--gold); text-decoration: none; }
+    a:hover { text-decoration: underline; }
+
+    /* ── Info cards ── */
+    .card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 20px 24px;
+      margin: 20px 0;
+    }
+    .card-green { border-left: 3px solid var(--green); }
+    .card-gold  { border-left: 3px solid var(--gold); }
+
+    /* ── Table ── */
+    .table-wrap { overflow-x: auto; margin: 20px 0; border-radius: 10px; border: 1px solid var(--border); }
+    table { width: 100%; border-collapse: collapse; font-size: 13.5px; }
+    thead tr { background: var(--surface2); }
+    th {
+      text-align: left;
+      padding: 12px 16px;
+      color: var(--muted);
+      font-weight: 700;
+      font-size: 12px;
+      letter-spacing: 0.5px;
+      text-transform: uppercase;
+      border-bottom: 1px solid var(--border);
+    }
+    td {
+      padding: 12px 16px;
+      color: var(--muted);
+      border-bottom: 1px solid var(--border);
+      vertical-align: top;
+    }
+    td strong { color: var(--white); }
+    tr:last-child td { border-bottom: none; }
+    tr:hover td { background: var(--surface); }
+
+    /* ── Badge ── */
+    .badge {
+      display: inline-block;
+      background: var(--surface2);
+      border: 1px solid var(--border);
+      border-radius: 4px;
+      padding: 2px 7px;
+      font-size: 11px;
+      font-weight: 700;
+      color: var(--gold);
+      letter-spacing: 0.3px;
+      margin-right: 6px;
+    }
+
+    /* ── Do / Don't columns ── */
+    .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; margin: 20px 0; }
+    .col-card {
+      background: var(--surface);
+      border: 1px solid var(--border);
+      border-radius: 10px;
+      padding: 18px 20px;
+    }
+    .col-card-title {
+      font-size: 12px;
+      font-weight: 800;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      margin-bottom: 12px;
+    }
+    .col-card-title.green { color: var(--green); }
+    .col-card-title.red   { color: var(--red); }
+    .col-card ul { padding-left: 16px; margin: 0; }
+    .col-card li { font-size: 13.5px; margin-bottom: 7px; }
+
+    /* ── Divider ── */
+    hr { border: none; border-top: 1px solid var(--border); margin: 40px 0; }
+
+    /* ── Footer ── */
+    footer {
+      background: var(--surface);
+      border-top: 1px solid var(--border);
+      text-align: center;
+      padding: 32px 20px;
+      color: var(--muted2);
+      font-size: 12.5px;
+      line-height: 1.8;
+    }
+    footer a { color: var(--muted); }
+
+    /* ── Responsive ── */
+    @media (max-width: 720px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { display: none; }
+      .main { padding: 32px 20px 60px; border-left: none; }
+      .two-col { grid-template-columns: 1fr; }
+      .topbar { padding: 16px 20px; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Top navigation bar -->
+  <header class="topbar">
+    <span class="topbar-name">Orbit</span>
+    <div class="topbar-logo"><img src="logo-mark.png" alt="Orbit" /></div>
+    <div class="topbar-divider"></div>
+    <span class="topbar-label">Privacy Policy</span>
+  </header>
+
+  <div class="layout">
+
+    <!-- Sidebar navigation -->
+    <aside class="sidebar">
+      <div class="sidebar-label">Contents</div>
+      <nav>
+        <a href="#summary">The Short Version</a>
+        <a href="#who">1. Who We Are</a>
+        <a href="#collect">2. What We Collect</a>
+        <a href="#location">3. Location Data</a>
+        <a href="#contacts">4. Find Friends &amp; Contacts</a>
+        <a href="#use">5. How We Use Your Data</a>
+        <a href="#not-use">6. How We Don't Use It</a>
+        <a href="#sharing">7. Data Sharing</a>
+        <a href="#transfers">8. International Transfers</a>
+        <a href="#security">9. Security</a>
+        <a href="#retention">10. Data Retention</a>
+        <a href="#rights">11. Your Rights</a>
+        <a href="#gdpr">12. EEA &amp; UK (GDPR)</a>
+        <a href="#ccpa">13. California (CCPA)</a>
+        <a href="#children">14. Children</a>
+        <a href="#changes">15. Changes</a>
+        <a href="#contact">16. Contact</a>
+      </nav>
+    </aside>
+
+    <!-- Main content -->
+    <main class="main">
+
+      <!-- Hero -->
+      <div class="hero">
+        <h1>Privacy <span>Policy</span></h1>
+        <p class="hero-meta">Effective date: May 2026 &nbsp;·&nbsp; Applies to: Orbit iOS &amp; Android</p>
+
+        <div class="summary" id="summary">
+          <div class="summary-title">The short version</div>
+          <ul>
+            <li><strong>We collect only what the app needs to work.</strong> Name, email, phone number, and the home location you type in.</li>
+            <li><strong>We never track your real-time location.</strong> Orbit does not use your device's GPS or location services at all.</li>
+            <li><strong>Your contacts never reach our servers as raw data.</strong> Phone numbers are hashed on your device before any network request is made.</li>
+            <li><strong>We don't sell your data. We don't share with brokers.</strong> Any advertising shown is contextual only — your personal data is never shared with advertisers.</li>
+            <li><strong>You can delete your account and all your data at any time</strong> from within the app.</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- 1. Who we are -->
+      <section class="section" id="who">
+        <h2>1. Who We Are</h2>
+        <p>
+          Orbit is an independently developed mobile application designed to help you stay meaningfully
+          connected with the people who matter most to you. The developer of Orbit is the data controller
+          responsible for your personal information under this policy.
+        </p>
+        <p>
+          For all privacy-related questions, data requests, or complaints, contact us at:
+          <strong><a href="mailto:privacy@orbitapp.com">privacy@orbitapp.com</a></strong>
+        </p>
+      </section>
+
+      <!-- 2. What we collect -->
+      <section class="section" id="collect">
+        <h2>2. What We Collect &amp; Why</h2>
+        <p>
+          We believe in collecting as little as possible. The table below is the complete list of
+          personal data Orbit stores — there are no hidden categories.
+        </p>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Data</th>
+                <th>Why we need it</th>
+                <th>GDPR legal basis</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><strong>Name</strong></td>
+                <td>Identifies you to your connections</td>
+                <td>Contract performance</td>
+              </tr>
+              <tr>
+                <td><strong>Email address</strong></td>
+                <td>Account login and password reset</td>
+                <td>Contract performance</td>
+              </tr>
+              <tr>
+                <td><strong>Phone number</strong> (as entered by you)</td>
+                <td>Shown in your own Account settings; used to generate your phone hash</td>
+                <td>Contract performance</td>
+              </tr>
+              <tr>
+                <td><strong>Phone hash</strong> (SHA-256 of your number)</td>
+                <td>Allows the Find Friends feature to match you with contacts without exposing raw numbers — see Section 4</td>
+                <td>Contract performance + legitimate interest (privacy protection)</td>
+              </tr>
+              <tr>
+                <td><strong>Home location</strong> (place name you type + approximate city-level coordinates)</td>
+                <td>Displayed on your profile; shown on the globe; used to calculate rough distance between connections' home locations</td>
+                <td>Contract performance</td>
+              </tr>
+              <tr>
+                <td><strong>"Moving to" destination</strong> (optional)</td>
+                <td>Shown on your profile only if you choose to set it</td>
+                <td>Contract performance</td>
+              </tr>
+              <tr>
+                <td><strong>Connection request records</strong></td>
+                <td>To send and receive connection requests between users</td>
+                <td>Contract performance</td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+        <p>
+          We do not collect device identifiers, advertising IDs, IP addresses, browser fingerprints,
+          or any behavioural or usage analytics.
+        </p>
+      </section>
+
+      <!-- 3. Location -->
+      <section class="section" id="location">
+        <h2>3. Location Data</h2>
+        <div class="card card-green">
+          <p style="margin:0; color: var(--white);">
+            <strong>Orbit does not use your device's GPS, location services, or real-time position in any way.</strong>
+            We never request location permission. We do not track where you are or have been.
+          </p>
+        </div>
+        <p>
+          The only location data in Orbit is what you choose to type yourself — a home city or place
+          name such as "London" or "Cape Town." This is a general place, not a precise address or
+          exact coordinate.
+        </p>
+        <p>
+          When you enter a place name, the app looks up approximate city-level coordinates from a
+          built-in reference list. These coordinates are used solely to:
+        </p>
+        <ul>
+          <li>Display your home as a pin on the Orbit globe</li>
+          <li>Calculate the rough distance between your home and your connections' homes</li>
+        </ul>
+        <p>
+          These coordinates come from the place name you typed — not from your device's GPS.
+          You can update or remove your home location at any time from your Account settings.
+        </p>
+      </section>
+
+      <!-- 4. Find Friends -->
+      <section class="section" id="contacts">
+        <h2>4. Find Friends &amp; Contacts</h2>
+        <p>
+          The Find Friends feature helps you discover which of your existing contacts are already
+          on Orbit. Using it is entirely optional. Declining contacts permission has no effect on
+          any other part of the app.
+        </p>
+
+        <h3>How it works, technically</h3>
+        <p>
+          When you tap Find Friends, Orbit asks your device's operating system for access to your
+          contacts. Before anything is sent over the network, each phone number in your contacts is
+          converted on your device into a <strong>SHA-256 hash</strong> — a one-way cryptographic
+          fingerprint. Think of it as a unique code derived from the number that cannot be reversed
+          back into the original digits.
+        </p>
+
+        <div class="card card-gold">
+          <p style="margin:0; color: var(--muted);">
+            <strong style="color: var(--white);">Raw phone numbers from your contacts never leave your phone.</strong>
+            Our servers only ever receive these irreversible hashes. This means that even in the
+            unlikely event of a server breach, the phone numbers of people in your contacts who
+            are not Orbit users cannot be recovered from our systems — because they were never
+            there.
+          </p>
+        </div>
+
+        <h3>What we do and don't store</h3>
+        <ul>
+          <li>We <strong>do not</strong> store your contacts list</li>
+          <li>We <strong>do not</strong> retain the hashes of non-Orbit-user contacts after the query completes</li>
+          <li>We <strong>do not</strong> use contact data for any purpose other than the single matching query you initiate</li>
+          <li>We <strong>do</strong> store a SHA-256 hash of your own phone number in your profile, so that others can find you via Find Friends</li>
+        </ul>
+        <p>
+          This approach is the same method used by privacy-focused messaging applications to
+          implement contact discovery without exposing users' address books.
+        </p>
+      </section>
+
+      <!-- 5. How we use data -->
+      <section class="section" id="use">
+        <h2>5. How We Use Your Data</h2>
+        <p>Your personal data is used for the following purposes and nothing else:</p>
+        <ul>
+          <li>Creating and maintaining your Orbit account</li>
+          <li>Displaying your profile to your connections</li>
+          <li>Enabling Find Friends contact matching</li>
+          <li>Sending and receiving connection requests</li>
+          <li>Showing your home location on the globe and in distance calculations</li>
+          <li>Sending password reset emails when you request them</li>
+        </ul>
+      </section>
+
+      <!-- 6. How we don't use data -->
+      <section class="section" id="not-use">
+        <h2>6. How We Don't Use Your Data</h2>
+        <div class="two-col">
+          <div class="col-card">
+            <div class="col-card-title green">✓ What we do</div>
+            <ul>
+              <li>Store only what the app requires</li>
+              <li>Protect data with encryption in transit</li>
+              <li>Let you delete everything, any time</li>
+              <li>Be honest about what we collect</li>
+            </ul>
+          </div>
+          <div class="col-card">
+            <div class="col-card-title red">✗ What we never do</div>
+            <ul>
+              <li>Sell your personal information</li>
+              <li>Share your personal data with advertisers</li>
+              <li>Build behavioural profiles</li>
+              <li>Use analytics SDKs that track you</li>
+              <li>Send promotional emails or push notifications without your explicit opt-in</li>
+              <li>Share your data with data brokers</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- 7. Data sharing -->
+      <section class="section" id="sharing">
+        <h2>7. Data Sharing</h2>
+        <p>
+          We share your data with no third parties except the infrastructure providers strictly
+          necessary to operate the service:
+        </p>
+        <div class="card">
+          <p><strong>Supabase</strong> — our database, authentication, and backend provider.</p>
+          <p style="margin-bottom:0;">
+            Your account data is stored on Supabase's servers. Supabase is SOC 2 Type II certified
+            and holds your data under a Data Processing Agreement with appropriate safeguards.
+            See <a href="https://supabase.com/privacy" target="_blank">Supabase's Privacy Policy →</a>
+          </p>
+        </div>
+        <div class="card" style="margin-top: 12px;">
+          <p><strong>Apple App Store / Google Play</strong></p>
+          <p style="margin-bottom:0;">
+            The platforms through which the app is distributed. Their standard platform policies
+            govern the distribution relationship only. Neither Apple nor Google receives your
+            Orbit profile data.
+          </p>
+        </div>
+        <p style="margin-top: 20px;">
+          We may disclose personal data if required by law, court order, or lawful governmental
+          authority, and only to the extent required.
+        </p>
+      </section>
+
+      <!-- 8. International transfers -->
+      <section class="section" id="transfers">
+        <h2>8. International Data Transfers</h2>
+        <p>
+          <span class="badge">GDPR</span> Orbit's backend infrastructure is operated by Supabase,
+          whose servers are located in the United States. If you are in the EEA or United Kingdom,
+          your personal data is transferred to and processed in the US.
+        </p>
+        <p>
+          This transfer is governed by <strong>Standard Contractual Clauses (SCCs)</strong> approved
+          by the European Commission, which Supabase has in place as part of its data processing
+          agreements. You may review Supabase's data transfer safeguards at
+          <a href="https://supabase.com/privacy" target="_blank">supabase.com/privacy</a>.
+        </p>
+      </section>
+
+      <!-- 9. Security -->
+      <section class="section" id="security">
+        <h2>9. Security</h2>
+        <p>We apply the following technical measures to protect your data:</p>
+        <ul>
+          <li><strong>Encryption in transit:</strong> all communication between the app and our servers uses HTTPS/TLS</li>
+          <li><strong>Authentication security:</strong> managed by Supabase Auth using industry-standard bcrypt password hashing</li>
+          <li><strong>Row Level Security (RLS):</strong> database policies ensure that users can only read or modify their own data — not other users' records</li>
+          <li><strong>Phone number hashing:</strong> phone numbers used for Find Friends matching are stored only as SHA-256 hashes, not as raw numbers</li>
+          <li><strong>No GPS collection:</strong> Orbit does not request or access device location services at any point</li>
+        </ul>
+        <p>
+          No system is perfectly secure. If we become aware of a breach that may affect your data, we will notify affected users promptly.
+        </p>
+      </section>
+
+      <!-- 10. Retention -->
+      <section class="section" id="retention">
+        <h2>10. Data Retention</h2>
+        <p>
+          We keep your personal data for as long as your account is active. When you delete your
+          account, all associated data — including your name, email, phone number, phone hash,
+          home location, and connection records — is permanently and irreversibly deleted from our
+          database within <strong>30 days</strong>.
+        </p>
+        <p>
+          You can delete your account at any time from the <strong>Account</strong> tab inside the app.
+          No email, no waiting period, no dark patterns.
+        </p>
+      </section>
+
+      <!-- 11. Your rights -->
+      <section class="section" id="rights">
+        <h2>11. Your Rights</h2>
+        <p>Regardless of where you are located, you have the right to:</p>
+        <ul>
+          <li><strong>Correction:</strong> update your name, phone number, and location at any time within the app</li>
+          <li><strong>Deletion:</strong> delete your account and all associated data from within the app, or by contacting us directly</li>
+        </ul>
+        <p>
+          To exercise any of these rights, email us at
+          <a href="mailto:privacy@orbitapp.com">privacy@orbitapp.com</a>.
+        </p>
+      </section>
+
+      <!-- 12. GDPR -->
+      <section class="section" id="gdpr">
+        <h2>12. EEA &amp; UK Users (GDPR)</h2>
+        <p>
+          <span class="badge">GDPR</span> If you are in the European Economic Area or United Kingdom,
+          the following additional rights apply under the General Data Protection Regulation (GDPR)
+          and UK GDPR:
+        </p>
+        <ul>
+          <li><strong>Restriction:</strong> you can ask us to restrict processing of your data in certain circumstances</li>
+          <li><strong>Objection:</strong> you can object to processing based on legitimate interests</li>
+          <li><strong>Withdraw consent:</strong> where processing is based on consent, you can withdraw it at any time without affecting the lawfulness of prior processing</li>
+          <li>
+            <strong>Supervisory authority:</strong> you have the right to lodge a complaint with your
+            local data protection authority. In the UK: <a href="https://ico.org.uk" target="_blank">ico.org.uk</a>.
+            In Ireland: <a href="https://www.dataprotection.ie" target="_blank">dataprotection.ie</a>.
+            All EU authorities: <a href="https://edpb.europa.eu/about-edpb/about-edpb/members_en" target="_blank">edpb.europa.eu</a>.
+          </li>
+        </ul>
+        <p>
+          The legal bases for our processing activities are set out in the data table in Section 2.
+          Our primary basis is <strong>contract performance</strong> — the data is necessary to
+          provide the service you signed up for.
+        </p>
+      </section>
+
+      <!-- 13. CCPA -->
+      <section class="section" id="ccpa">
+        <h2>13. California Residents (CCPA)</h2>
+        <p>
+          <span class="badge">CCPA</span> If you are a California resident, the California Consumer
+          Privacy Act grants you the following rights:
+        </p>
+        <ul>
+          <li><strong>Right to know</strong> what categories of personal information we collect (see Section 2)</li>
+          <li><strong>Right to know</strong> whether your personal information is sold or disclosed — it is not</li>
+          <li><strong>Right to opt out</strong> of the sale of personal information — we do not sell personal information, so no opt-out is necessary</li>
+          <li><strong>Right to delete</strong> your personal information</li>
+          <li><strong>Right to non-discrimination</strong> for exercising these rights</li>
+          <li><strong>Authorised agents:</strong> you may submit a request through an authorised agent by providing us written proof of the agent's authorisation</li>
+        </ul>
+        <p>
+          We will respond to verifiable consumer requests within <strong>45 days</strong>. We may
+          extend this period by a further 45 days where necessary, with prior notice.
+        </p>
+        <p>
+          To submit a request: <a href="mailto:privacy@orbitapp.com">privacy@orbitapp.com</a>
+        </p>
+      </section>
+
+      <!-- 14. Children -->
+      <section class="section" id="children">
+        <h2>14. Children's Privacy</h2>
+        <p>
+          Orbit is not directed to children under the age of 13 (or 16 where required by local law).
+          We do not knowingly collect personal information from anyone under these ages. If you
+          believe a child has created an account, please contact us and we will promptly delete
+          their data.
+        </p>
+      </section>
+
+      <!-- 15. Changes -->
+      <section class="section" id="changes">
+        <h2>15. Changes to This Policy</h2>
+        <p>
+          If we make material changes to this policy, we will update the effective date at the top
+          of this page and notify you within the app before the changes take effect. We will never
+          retroactively change how we handle data you've already provided without giving you the
+          opportunity to review the change first.
+        </p>
+        <p>
+          Minor updates — such as clarifications or corrections that do not affect your rights —
+          may be made without in-app notification.
+        </p>
+      </section>
+
+      <!-- 16. Contact -->
+      <section class="section" id="contact">
+        <h2>16. Contact</h2>
+        <div class="card">
+          <p><strong>Privacy enquiries, data requests, and complaints:</strong></p>
+          <p><a href="mailto:privacy@orbitapp.com">privacy@orbitapp.com</a></p>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <footer>
+    <p>&copy; 2026 Orbit. All rights reserved.</p>
+    <p style="margin-top: 6px;">
+      Written to meet the requirements of the GDPR, UK GDPR, and California Consumer Privacy Act (CCPA).
+    </p>
+  </footer>
+
+</body>
+</html>
